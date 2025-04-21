@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato - Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .media {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .nav-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-links a {
+            margin: 0 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .radio-group, .checkbox-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário de Contato - Solicitação de Serviços</h1>
+        
+        <nav>
+            <a href="file:///C:/Users/PICHAU/OneDrive/Documents/Trabalho%20WEB/index.html">Landing Page</a>
+            <a href="file:///C:/Users/PICHAU/OneDrive/Documents/Trabalho%20WEB/curriculo.html">Currículo</a>
+            <a href="https://github.com/DanielRGoncalves">GitHub</a>
+            <a href="file:///C:/Users/PICHAU/OneDrive/Documents/Trabalho%20WEB/serviços.html">Serviços</a>
+            <a href="file:///C:/Users/PICHAU/OneDrive/Documents/Trabalho%20WEB/Formulário.html">Formulário</a>
+        </nav>
+
+       
+      
+
+        
+        </div>
+
+        <table id="services-table">
+            <tr>
+                <th>Serviço</th>
+                <th>Descrição</th>
+            </tr>
+            <tr>
+                <td>Consultoria</td>
+                <td>Orientação profissional para negócios</td>
+            </tr>
+            <tr>
+                <td>Desenvolvimento Web</td>
+                <td>Criação de sites e aplicativos</td>
+            </tr>
+            <tr>
+                <td>Marketing Digital</td>
+                <td>Estratégias de divulgação online</td>
+            </tr>
+        </table>
+
+        <form id="form-section">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="Ex: 11987654321" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de Pessoa</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="tipo_pessoa" value="fisica" required> Física</label>
+                    <label><input type="radio" name="tipo_pessoa" value="juridica"> Jurídica</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="horario">Melhor Horário para Contato</label>
+                <select id="horario" name="horario" required>
+                    <option value="">Selecione</option>
+                    <option value="manha">Manhã (8h-12h)</option>
+                    <option value="tarde">Tarde (12h-18h)</option>
+                    <option value="noite">Noite (18h-22h)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de Serviço</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="servico" value="consultoria"> Consultoria</label>
+                    <label><input type="checkbox" name="servico" value="desenvolvimento"> Desenvolvimento
